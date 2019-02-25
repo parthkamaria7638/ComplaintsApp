@@ -1,0 +1,9 @@
+
+<ul>
+  <li *ngFor="let user of Users" class="color-text">
+  User name: <strong>{{ user.username }}</strong> <br>
+  User email: <strong>{{ user.email }}</strong> <br>
+  <userstatus [status]="user.status"></userstatus>
+ <hr class="horizontal-rule">
+  </li>
+</ul> 

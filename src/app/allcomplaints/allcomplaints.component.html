@@ -1,0 +1,28 @@
+<ul>
+  <li *ngFor="let complain of complaints | unanalysed" class="color-text">
+  Complaint Type: <strong>{{ complain.Type }}</strong> <br>
+  Complaint Body: <strong>{{ complain.Body }}</strong> <br>
+  Complaint Location: <strong>{{ complain.Location }}</strong> <br>
+  Complaint Time: <strong>{{ complain.Timestamp | TimeRemaining }}</strong> <br>
+  <button class="btn btn-success" (click)="approveComplaint(complain)">Approve</button>
+  <button class="btn btn-danger" (click)="deleteComplaint(complain)">Delete</button>
+  <hr class="horizontal-rule">
+  </li>
+</ul> 
+
+
+
+<!-- <div *ngFor="let complaint of complaints">
+  <div class="card text-center">
+    <div class="card-header">
+      {{ complaint.Type }}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ complaint.Location }}</h5>
+      <p class="card-text">{{ complaint.Body }}</p>
+    </div>
+    <div class="card-footer text-muted">
+      {{ complaint.Timestamp | TimeRemaining }}
+    </div>
+  </div>
+</div> -->

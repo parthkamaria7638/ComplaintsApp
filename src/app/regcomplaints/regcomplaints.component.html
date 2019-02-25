@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let complain of complaints | approved" class="color-text">
+  Complaint Type: <strong>{{ complain.Type }}</strong> <br>
+  Complaint Body: <strong>{{ complain.Body }}</strong> <br>
+  Complaint Location: <strong>{{ complain.Location }}</strong> <br>
+  Complaint Time: <strong>{{ complain.Timestamp | TimeRemaining }}</strong> <br>
+  <hr class="horizontal-rule">
+  </li>
+</ul> 
